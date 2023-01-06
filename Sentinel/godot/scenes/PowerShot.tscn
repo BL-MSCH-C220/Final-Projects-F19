@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/PowerShot.gd" type="Script" id=1]
+[ext_resource path="res://sprites/2scale/powerShot.png" type="Texture" id=2]
+
+[node name="PowerShot" type="RigidBody2D" groups=[
+"powerShot",
+]]
+collision_layer = 16
+collision_mask = 12
+mass = 398.2
+gravity_scale = -8.92
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.1434, -9.00244 )
+scale = Vector2( 2.96928, 2.48701 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0.923848, -10.3192 )
+scale = Vector2( 1.51108, 1.4325 )
+polygon = PoolVector2Array( 51.3889, 34.234, -2.28056, 56.6028, -53.7785, 33.8454, -53.6662, -19.6544, 0.00325227, -46.0902, 47.9631, -23.7214 )

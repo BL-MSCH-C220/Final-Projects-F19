@@ -1,0 +1,388 @@
+{
+    "verbs": [
+      {
+        "v": "EXITS",
+        "map": "EXITS"
+      },
+      {
+        "v": "QUIT",
+        "map": "QUIT"
+      },
+      {
+        "v": "T",
+        "map": "TALK"
+      },
+      {
+        "v": "TALK",
+        "map": "TALK"
+      },
+      {
+        "v":"F",
+        "map": "FORWARD"
+      },
+      {
+        "v":"forward",
+        "map": "FORWARD"
+      },
+      {
+        "v":"LIE",
+        "map": "LIE"
+      },
+      {
+        "v":"INTIMIDATE",
+        "map": "INTIMIDATE"
+      },
+      {
+        "v":"PERSUADE",
+        "map": "PERSUADE"
+      },
+      {
+        "v":"L",
+        "map": "LIE"
+      },
+      {
+        "v":"P",
+        "map": "PERSUADE"
+      },
+      {
+        "v": "BACK",
+        "map": "BACK"
+      },
+      {
+        "v": "B",
+        "map": "BACK"
+      },
+      {
+        "v":"WHY",
+        "map": "WHY"
+      },
+      {
+        "v":"W",
+        "map": "WHY"
+      },
+      {
+        "v": "REFUSE",
+        "map": "REFUSE"
+      },
+      {
+        "v": "R",
+        "map": "REFUSE"
+      },
+      {
+        "v": "HELP",
+        "map": "HELP"
+      },
+      {
+        "v": "H",
+        "map": "HELP"
+      },
+      {
+        "v": "C",
+        "map": "CONVINCE"
+      },
+      {
+        "v": "IGNORE",
+        "map": "IGNORE"
+      },
+      {
+        "v": "CONVINCE",
+        "map": "CONVINCE"
+      },
+      {
+        "v": "ACCEPT",
+        "map": "ACCEPT"
+      },
+      {
+        "v": "FINISH",
+        "map": "FINISH"
+      }
+
+
+    ],
+    "rooms": {
+      "START": {
+        "name": "Welcome to Wonder World.",
+        "desc": "You've just woken up in the central pavillion of Wonder World. You feel very confused, you don't remember how you got here, but now that you are here, you decide to look around.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "MARIE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MARIE": {
+        "name": "You are talking to Marie.",
+        "desc": "You are walking around the central pavillion of Wonder World, trying to find an exit. The gates where you came in the park are nowhere in sight, something is seems off as no one\nelse is outside walking around. You decide to find where everyone went and you see a Nun locking up gates that go inward toward more of the rides. You approach the gates and\nshe calls out\r\r\r\n\n'You should leave! we don't have anymore room for anyone else, unless you have a skill we can use, you best take your chances outside the park.'\n",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "MARIE2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MARIE2": {
+        "name": "Marie",
+        "desc": "You can: \nLie: 'I am a doctor! I can help anyone inside that is injured.' \nIntimidate: 'You think that this gate is going to stop me from getting in?!'\nPersuade: 'Look, I am trying to figure out what is happening. Trust me, I wont be staying long.'",
+        "exits": [
+          {
+            "verb": "LIE",
+            "target": "JIM",
+            "condition": ""
+          },
+          {
+            "verb": "INTIMIDATE",
+            "target": "JIM",
+            "condition": ""
+          },
+          {
+            "verb": "PERSUADE",
+            "target": "JIM",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM": {
+        "name": "You are talking to Jim.",
+        "desc": "Walking further from the gates, deeper into the park you see all of the rollercoasters have stopped and the sky is an even brighter orange color. You look further down the \npath you are on to see man seemingly looting the gift shops in the park. You try to pass by him without him noticing as he looks quite strange but he turns around and says:\r\r\r\n'Would you mind giving me a hand? Were not going to have much time before it's not safe up here.'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "JIM2",
+            "condition": ""
+          },
+          {
+            "verb": "BACK",
+            "target": "MARIE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM2": {
+        "name": "Jim",
+        "desc": "You can: \nAsk why: 'Why are we running out of time? What happened?'\nRun back to Marie \nHelp him: 'Sure, i'll help. What do you want me to do?' \nRefuse to help: 'No, I am not going to help you. Just let me by!'",
+        "exits": [
+          {
+            "verb": "WHY",
+            "target": "JIM3",
+            "condition": ""
+          },
+          {
+            "verb": "BACK",
+            "target": "MARIE",
+            "condition": ""
+          },
+          {
+            "verb": "HELP",
+            "target": "JIM4",
+            "condition": ""
+          },
+          {
+            "verb": "REFUSE",
+            "target": "LOSE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM3": {
+        "name": "Jim",
+        "desc": "Jim responds by telling you 'The day of reckoning is upon us, son. We must prepare for the worst!'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "JIM2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "JIM4": {
+        "name": "Jim",
+        "desc": "You help Jim loot for some survival items. He thanks you, and tells you that you can go further into the park now.",
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "VICKIE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "VICKIE": {
+        "name": "You are talking to Vickie.",
+        "desc": "Making your way toward the ferris wheel you see a girl outside of it looking to be setting up a garden right outside of the ferris wheel. She is wearing a name tag \nso it seems she works at the park or at least used to. You notice that the ferris wheel seems to have some vines and plants growing in it, like it hasn't been started in years. \nYou walk up to the stairs to the ferris wheel when Vickie calls out to you: \r\r\r\n\n'HEY! That attraction is out of order don't even think about starting it up!'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "VICKIE2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "VICKIE2": {
+        "name": "Vickie",
+        "desc": "You can: \nAsk her why you shouldn't start the ride. \nIgnore her: 'I don't see how you're going to stop me!' \nConvince her: 'Please. I just need to see what the world is like outside of this park. I need to know.'",
+        "exits": [
+          {
+            "verb": "WHY",
+            "target": "VICKIE3",
+            "condition": ""
+          },
+          {
+            "verb": "IGNORE",
+            "target": "VICKIE4",
+            "condition": ""
+          },
+          {
+            "verb": "CONVINCE",
+            "target": "MORT",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "VICKIE3": {
+        "name": "Vickie",
+        "desc": "'This ride hasn't been started for so long for a reason! We are finally getting some real plant growth out here and I will not have you mess that up! These plants are going to be useful in years to come when the world comes back together! Please, leave the rude along and let nature finally reclaim what we have stolen from it.'",       
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "VICKIE2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "VICKIE4": {
+        "name": "Vickie",
+        "desc": "Vickie yells out to you: 'YOU'RE GOING TO REGRET THIS! THE WORLD WILL PUNISH YOU!'",       
+        "exits": [
+          {
+            "verb": "FORWARD",
+            "target": "MORT",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MORT": {
+        "name": "You are talking to Mort.",
+        "desc": "You manage to get around Vickie, and she storms off into the park. You realize you need someone to start and stop the machine for you. Luckily you see a guy lurking on the \nback of the wheel mumbling to himself. You ask him if he can operate the wheel to he responds:\n\n'What do you think your going to see up there?'",
+        "exits": [
+          {
+            "verb": "TALK",
+            "target": "MORT2",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MORT2": {
+        "name": "Mort",
+        "desc": "Mort says 'You know how this world went to shit? Cause I don't. I don't think anyone knows what really happened. All I know for sure is who is behind it. Those damn Lizard men. Listen, yes, I can operate the ride. But I don't think you're going to like what you see. Maybe you should just accept life as it is and stay in the park forever. \n\nYou can: \nAccept with that knowledge: 'I'm aware that this will change everything. I just need to know.' \nQuestion him more: 'What do you think has happened to the world?' \nRefuse to see: 'Maybe you are right. Maybe I should just stay in the park.'",
+        "exits": [
+          {
+            "verb": "ACCEPT",
+            "target": "WIN1",
+            "condition": ""
+          },
+          {
+            "verb": "REFUSE",
+            "target": "WIN2",
+            "condition": ""
+          },
+          {
+            "verb": "WHY",
+            "target": "MORT3",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MORT3": {
+        "name": "Mort",
+        "desc": "Mort says to you 'I think the lizard men have finally gotten tired of what we were turning this world into. They called up to their reinforcements in space and brought them down \nto eradicate everyone who didn't believe in them. Are you trying to join the eradicated?? Because I can tell you right now that if you choose not to believe me...That's \nwhat will happen. So you can either accept that, and stay in the park, or refuse that, and I'll let the wheel take you up..'",
+        "exits": [
+          {
+            "verb": "ACCEPT",
+            "target": "WIN2",
+            "condition": ""
+          },
+          {
+            "verb": "REFUSE",
+            "target": "WIN1",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOSE1": {
+        "name": "Because you refused, you cannot progress any more. Please close the game and start again.",
+        "desc": "The End.",
+        "exits": [
+          {
+            "verb": "FINISH",
+            "target": "LOSE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LOSE": {
+        "name": "Done.",
+        "desc": "The End.",
+        "exits": [
+          {
+            "verb": "FINISH",
+            "target": "LOSE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "WIN1": {
+        "name": "The outside world.",
+        "desc": "You look out from the top of the ferris wheel, outside of the park and see... Total destruction. A ruined landscape. The end of society.",
+        "exits": [
+          {
+            "verb": "FINISH",
+            "target": "WIN",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "WIN2": {
+        "name": "You chose to stay in the park.",
+        "desc": "By staying in the park, you are content in the fact that it seems safe here and that whatever happened outside, you do not need to know and you will live the rest of your life here.",
+        "exits": [
+          {
+            "verb": "FINISH",
+            "target": "WIN",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "WIN": {
+        "name": "You win!",
+        "desc": "The End.",
+        "exits": [
+          {
+            "verb": "FINISH",
+            "target": "LOSE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      }
+    }
+}
+    

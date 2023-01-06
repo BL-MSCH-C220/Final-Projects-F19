@@ -1,0 +1,93 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Assets/Models/Monsters/Orc/LlittlOrcLP.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.262745, 0.145098, 0.145098, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.619608, 0.2, 0.2, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.513726, 0.0980392, 0.0980392, 1 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.960784, 0.960784, 0.960784, 1 )
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=16]
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_color = Color( 0.0980392, 0.631373, 0.168627, 1 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0.207843, 0.027451, 0.027451, 1 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 0.317647, 0.101961, 0.105882, 1 )
+
+[sub_resource type="CylinderShape" id=20]
+radius = 1.39986
+height = 3.20828
+
+[node name="Area" type="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.256708 )
+
+[node name="LlittlOrcLP" type="MeshInstance" parent="."]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.160882, 0.211176, -0.0274065 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+material/2 = SubResource( 3 )
+material/3 = SubResource( 4 )
+material/4 = SubResource( 5 )
+material/5 = SubResource( 6 )
+material/6 = SubResource( 7 )
+material/7 = SubResource( 8 )
+material/8 = SubResource( 9 )
+material/9 = SubResource( 10 )
+material/10 = SubResource( 11 )
+material/11 = SubResource( 12 )
+material/12 = SubResource( 13 )
+material/13 = SubResource( 14 )
+material/14 = SubResource( 15 )
+material/15 = SubResource( 16 )
+material/16 = SubResource( 17 )
+material/17 = SubResource( 18 )
+material/18 = SubResource( 19 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.313927, 1.78358, 0 )
+shape = SubResource( 20 )

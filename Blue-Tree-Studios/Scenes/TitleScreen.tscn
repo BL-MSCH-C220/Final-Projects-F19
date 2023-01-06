@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/New_Piskel_14_ (1).ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scripts/VideoPlayer.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+"
+
+[node name="TitleScreen" type="Node"]
+script = SubResource( 1 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = -2.10526
+margin_top = 2.10522
+margin_right = 1019.89
+margin_bottom = 597.105
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.513367
+margin_top = 8.48154
+margin_right = 0.513428
+margin_bottom = 8.48157
+custom_constants/margin_top = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 512.0
+margin_top = 20.0
+margin_right = 512.0
+margin_bottom = 580.0
+size_flags_horizontal = 4
+custom_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]

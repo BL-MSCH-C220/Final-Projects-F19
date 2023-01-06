@@ -1,0 +1,136 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/game.gd" type="Script" id=1]
+[ext_resource path="res://sprites/2scale/bgSpace.png" type="Texture" id=2]
+[ext_resource path="res://Station.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Cannon.gd" type="Script" id=4]
+[ext_resource path="res://sprites/2scale/stationCannon.png" type="Texture" id=5]
+[ext_resource path="res://sprites/2scale/base100.png" type="Texture" id=6]
+[ext_resource path="res://sprites/2scale/stationHull.png" type="Texture" id=7]
+[ext_resource path="res://sprites/2scale/bgEarth.png" type="Texture" id=8]
+[ext_resource path="res://sprites/2scale/resourceHP.png" type="Texture" id=9]
+[ext_resource path="res://scenes/Control.gd" type="Script" id=10]
+[ext_resource path="res://sprites/2scale/allyButton.png" type="Texture" id=11]
+[ext_resource path="res://scenes/Control2.gd" type="Script" id=12]
+[ext_resource path="res://sprites/2scale/powerShotButton.png" type="Texture" id=13]
+[ext_resource path="res://ARCADECLASSIC.TTF" type="DynamicFontData" id=14]
+[ext_resource path="res://scenes/Label.gd" type="Script" id=15]
+[ext_resource path="res://scripts/Score.gd" type="Script" id=16]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 63.6188
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 14 )
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+texture = ExtResource( 2 )
+
+[node name="Station" type="KinematicBody2D" parent="."]
+position = Vector2( 400, 1500 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Hull" type="StaticBody2D" parent="Station" groups=[
+"station",
+]]
+editor/display_folded = true
+position = Vector2( 0, -1000 )
+
+[node name="Cannon" type="StaticBody2D" parent="Station/Hull"]
+z_index = 3
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Station/Hull/Cannon"]
+position = Vector2( 50, 0 )
+rotation = 1.5708
+texture = ExtResource( 5 )
+
+[node name="HullCollision" type="CollisionShape2D" parent="Station/Hull"]
+shape = SubResource( 1 )
+
+[node name="HullSprite" type="Sprite" parent="Station/Hull"]
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="HullCap" type="Sprite" parent="Station"]
+position = Vector2( 0, -550 )
+z_index = 3
+texture = ExtResource( 7 )
+offset = Vector2( 0, -450 )
+
+[node name="Earth" type="StaticBody2D" parent="." groups=[
+"earth",
+]]
+editor/display_folded = true
+position = Vector2( 400, 550 )
+
+[node name="Sprite" type="Sprite" parent="Earth"]
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Earth"]
+polygon = PoolVector2Array( 188, -40.8, 188, -39.7, 248, -30.7, 248, -29.7, 328, -12.6, 328, -11.5, 396, 7.5, 396, 8.5, 400, 9.4, 400, 47, -400, 47, -400, 16.5, -399.9, 15, -393.4, 15, -342.3, -3, -335.4, -3, -306.3, -13, -299.1, -13, -226.2, -31, -215.4, -31, -150.2, -43, -135.2, -43, -100.9, -47, 122.5, -47 )
+
+[node name="LastHeart" type="Sprite" parent="."]
+position = Vector2( 45, 35 )
+texture = ExtResource( 9 )
+
+[node name="Heart" type="Sprite" parent="."]
+position = Vector2( 145, 35 )
+texture = ExtResource( 9 )
+
+[node name="Heart2" type="Sprite" parent="."]
+position = Vector2( 95, 35 )
+texture = ExtResource( 9 )
+
+[node name="Control" type="Control" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 152.787
+margin_top = 501.111
+margin_right = 228.787
+margin_bottom = 571.111
+icon = ExtResource( 11 )
+
+[node name="Control2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+
+[node name="Button" type="Button" parent="Control2"]
+margin_left = 567.64
+margin_top = 490.958
+margin_right = 633.64
+margin_bottom = 558.958
+icon = ExtResource( 13 )
+
+[node name="Money" type="Label" parent="."]
+margin_left = 380.0
+margin_top = 15.9606
+margin_right = 451.183
+margin_bottom = 46.9606
+custom_fonts/font = SubResource( 2 )
+text = "Money "
+script = ExtResource( 15 )
+
+[node name="Score" type="Label" parent="."]
+margin_left = 189.072
+margin_top = 15.0
+margin_right = 278.072
+margin_bottom = 43.2774
+custom_fonts/font = SubResource( 2 )
+text = "Score"
+script = ExtResource( 16 )
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control2/Button" to="Control2" method="_on_Button_pressed"]

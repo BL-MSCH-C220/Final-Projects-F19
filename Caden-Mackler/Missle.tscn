@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Other/16942_nuclear_warhead_V1.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Particle/flame_04.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+margin = 10.0
+radius = 100.0
+height = 950.0
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 1, 0.505882, 0.0235294, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 0.3
+initial_velocity_random = 1.0
+linear_accel = 5.0
+scale = 3.5
+color = Color( 0.968627, 0.658824, 0, 1 )
+
+[sub_resource type="QuadMesh" id=4]
+
+[node name="Missle" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.19249e-008, 1, 0, -1, 1.19249e-008, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 4.95426 )
+shape = SubResource( 1 )
+
+[node name="Missle" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0971984, 0.0607727 )
+material_override = SubResource( 2 )
+visibility_aabb = AABB( -0.362272, -1.5098, -1.14055, 0.724544, 0.662174, 1.70494 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )

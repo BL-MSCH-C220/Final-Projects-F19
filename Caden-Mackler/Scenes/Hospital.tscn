@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Skyscraper1.tscn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.705882, 0.117647, 0.117647, 1 )
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+size = Vector2( 0.4, 0.7 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.683594, 0.144639, 0.176816, 1 )
+
+[sub_resource type="PlaneMesh" id=4]
+material = SubResource( 3 )
+size = Vector2( 0.4, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Skyscraper" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.5, 0, 0, 0, 3, 0, 0, 0, 1.9, 0, 0, 0 )
+
+[node name="StaticBody2" type="StaticBody" parent="Skyscraper"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Skyscraper/StaticBody2"]
+transform = Transform( 0.0971086, 0, -1.22495, -0.00766471, 0.99989, -0.000920424, 0.808571, 0.0231403, 0.097098, -0.424802, 4.3623, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="Skyscraper/StaticBody2"]
+transform = Transform( 0.0154186, -1.92285, 0, 0.519938, 0.0154186, 7.3284e-09, -9.30253e-09, -2.75863e-10, 1, -0.41267, 4.35735, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="SpotLight" type="SpotLight" parent="Skyscraper/StaticBody2"]
+transform = Transform( 0.0537517, 0.127297, -0.756718, -0.00469017, 0.394485, 0.0660283, 0.623429, 5.86443e-10, 0.0442839, -2.08884, 4.55713, 0.144937 )
+light_energy = 3.42

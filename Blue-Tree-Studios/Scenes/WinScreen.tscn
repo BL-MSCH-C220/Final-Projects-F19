@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/W9k1.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scenes/VideoPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Assets/YOU-WIN.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Button2.gd" type="Script" id=5]
+
+[node name="WinScreen" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Play Again" type="Node2D" parent="Buttons"]
+position = Vector2( 238.35, 439.833 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="Buttons/Play Again"]
+margin_left = 45.4837
+margin_top = -12.8606
+margin_right = 231.484
+margin_bottom = 64.1394
+
+[node name="Label" type="Label" parent="Buttons/Play Again"]
+margin_left = 45.0
+margin_top = -11.0
+margin_right = 230.0
+margin_bottom = 63.0
+text = "Play Again?"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Credits" type="Node2D" parent="Buttons"]
+position = Vector2( 654.313, 463.885 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="Buttons/Credits"]
+margin_left = -126.0
+margin_top = -37.0
+margin_right = 73.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="Buttons/Credits"]
+margin_left = -125.0
+margin_top = -37.0
+margin_right = 71.0
+margin_bottom = 41.0
+text = "Credits"
+align = 1
+valign = 1
+uppercase = true
+[connection signal="pressed" from="Buttons/Play Again/Button" to="Buttons/Play Again" method="_on_Button_pressed"]
+[connection signal="pressed" from="Buttons/Credits/Button" to="Buttons/Credits" method="_on_Button_pressed"]

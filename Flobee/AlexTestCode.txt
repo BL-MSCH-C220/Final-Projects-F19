@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+
+import pyglet, utils, os, random, time, open_color, arcade, json, sys, logging
+
+utils.check_version((3,7))
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+SCREEN_TITLE = "Game Screen"
+Music_Player = pyglet.media.Player()
+BeginningSong = pyglet.media.load("Assets/Sound/BeginningHum.wav")
+
+version = (3,7)
+
+assert sys.version_info >= version, "This script requires at least Python {0}.{1}".format(version[0],version[1])
+
+logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+
+print('Your car was making a funny noise so you pulled over. Upon further inspection of the engine, it blows up in your face. Hahaha. ')
+# Game loop functions
+class GameWindow(arcade.Window):
+
+    def __init__(self):
+        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+        file_path = os.path.dirname(os.path.abspath(__file__))
+        os.chdir(file_path)
+        arcade.set_background_color(open_color.gray_9)
+    
+    def on_draw(self):
+        arcade.start_render()
+
+    def setup(self):
+        pass
+    
+    def update(self, delta_time):
+        pass
+
+def render(game,current,moves,points):
+    ''' Displays the current room, moves, and points '''
+    r = game['rooms']
+    c = r[current]
+
+    print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
+    print('\n\nYou are in the {name}'.format(name=c['name']))
+    print(c['desc'])
+    if len(c['inventory']):
+        print('You see the following items:')
+        for i in c['inventory']:
+            print('\t{i}'.format(i=i))
+
+def getInput(game,current,verbs):
+    ''' Asks the user for input and normalizes the inputted value. Returns a list of commands '''
+
+    toReturn = input('\nWhere would you like to go? ').strip().upper().split()
+    if (len(toReturn)):
+        #assume the first word is the verb
+        toReturn[0] = normalizeVerb(toReturn[0],verbs)
+    return toReturn
+
+
+def update(selection,game,current,inventory):
+    ''' Process the input and update the state of the world '''
+    s = list(selection)[0]  #We assume the verb is the first thing typed
+    if s == "":
+        print("\nSorry, I don't understand.")
+        return current
+    elif s == 'EXITS':
+        printExits(game,current)
+        return current
+    else:
+        for e in game['rooms'][current]['exits']:
+            if s == e['verb'] and e['target'] != 'NoExit':
+                return e['target']
+    print("\nYou can't go that way!")
+    return current
+
+
+# Helper functions
+
+def printExits(game,current):
+    e = ", ".join(str(x['verb']) for x in game['rooms'][current]['exits'])
+    print('\nYou can go the following directions: {directions}'.format(directions = e))
+
+def normalizeVerb(selection,verbs):
+    for v in verbs:
+        if selection == v['v']:
+            return v['map']
+    return ""
+
+def end_game(winning,points,moves):
+    if winning:
+        print('You get in your car and everything gets blurry. Your head hits the steering wheel with a loud thud. Congratulations. You are stuck in a time loop! Enjoy! ')
+        print('You won in {moves} moves! Nicely done!'.format(moves=moves, points=points))
+    else:
+        print('Thanks for playing!')
+        print('You scored {points} points in {moves} moves. See you next time!'.format(moves=moves, points=points))
+
+
+
+
+
+def main():
+    BeginningSong.play()
+    window = GameWindow()
+    window.setup()
+    arcade.run()
+    gameFile = 'game.json'
+
+    game = {}
+    with open(gameFile) as json_file:
+        game = json.load(json_file)
+
+    current = 'START'
+    win = ['END']
+    lose = []
+    moves = 0
+    points = 0
+    inventory = []
+
+    while True:
+
+        render(game,current,moves,points)
+
+        selection = getInput(game,current,game['verbs'])
+
+        if selection[0] == 'QUIT':
+            end_game(False,points,moves)
+            break
+
+        current = update(selection,game,current,inventory)
+
+        if current in win:
+            end_game(True,points,moves)
+            break
+        if current in lose:
+            end_game(False,points,moves)
+            break
+
+        moves += 1
+
+
+
+
+
+if __name__ == '__main__':
+	main()

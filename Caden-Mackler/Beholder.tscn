@@ -1,0 +1,251 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://Assets/Models/Monsters/Beholder.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Models/Monsters/Beholder.jpeg" type="Texture" id=2]
+[ext_resource path="res://Assets/Models/Monsters/Eye Ball.jpeg" type="Texture" id=3]
+[ext_resource path="res://Assets/Models/Monsters/Teeth.jpeg" type="Texture" id=4]
+[ext_resource path="res://Assets/Models/Monsters/Tongue.jpeg" type="Texture" id=5]
+[ext_resource path="res://Assets/Models/Monsters/Beholder Mouth.jpeg" type="Texture" id=6]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.282353, 0.180392, 0.533333, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.117647, 0.0156863, 0.25098, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.941176, 0.858824, 0.611765, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.321569, 0.168627, 0.517647, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.2, 0.113725, 0.423529, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.176471, 0.0980392, 0.290196, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.815686, 0.737255, 0.552941, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.2, 0.0941176, 0.470588, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.184314, 0.145098, 0.317647, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_color = Color( 0.168627, 0.0980392, 0.286275, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_color = Color( 0.827451, 0.717647, 0.509804, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.223529, 0.0470588, 0.643137, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_color = Color( 0.25098, 0.137255, 0.47451, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=16]
+albedo_color = Color( 0.882353, 0.780392, 0.505882, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=19]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0.901961, 0.772549, 0.529412, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=21]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=22]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=23]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=24]
+albedo_color = Color( 0.882353, 0.8, 0.427451, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=25]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_color = Color( 0.960784, 0.960784, 0.960784, 1 )
+
+[sub_resource type="SpatialMaterial" id=27]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=28]
+albedo_color = Color( 0.427451, 0.192157, 0.192157, 1 )
+
+[sub_resource type="SpatialMaterial" id=29]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=30]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=31]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=32]
+albedo_color = Color( 0.843137, 0.760784, 0.376471, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=33]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=34]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=35]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=36]
+albedo_color = Color( 0.85098, 0.8, 0.231373, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=37]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=38]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=39]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=40]
+albedo_color = Color( 0.901961, 0.792157, 0.298039, 1 )
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=41]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=42]
+albedo_color = Color( 0.894118, 0.8, 0.52549, 1 )
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=43]
+albedo_color = Color( 1, 0, 0, 1 )
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=44]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=45]
+albedo_color = Color( 0.25098, 0.054902, 0.4, 1 )
+albedo_texture = ExtResource( 2 )
+metallic = 0.23
+roughness = 0.81
+
+[sub_resource type="SpatialMaterial" id=46]
+albedo_color = Color( 0.976471, 0.819608, 0.396078, 1 )
+albedo_texture = ExtResource( 3 )
+metallic = 0.53
+roughness = 0.81
+
+[sub_resource type="SpatialMaterial" id=47]
+albedo_color = Color( 0.988235, 0.988235, 0.988235, 1 )
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="SphereShape" id=1]
+radius = 2.90235
+
+[node name="Beholder Scene" type="Area"]
+
+[node name="Beholder Mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17724, 2.83905, -5.85567 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 2 )
+material/1 = SubResource( 3 )
+material/2 = SubResource( 4 )
+material/3 = SubResource( 5 )
+material/4 = SubResource( 6 )
+material/5 = SubResource( 7 )
+material/6 = SubResource( 8 )
+material/7 = SubResource( 9 )
+material/8 = SubResource( 10 )
+material/9 = SubResource( 11 )
+material/10 = SubResource( 12 )
+material/11 = SubResource( 13 )
+material/12 = SubResource( 14 )
+material/13 = SubResource( 15 )
+material/14 = SubResource( 16 )
+material/15 = SubResource( 17 )
+material/16 = SubResource( 18 )
+material/17 = SubResource( 19 )
+material/18 = SubResource( 20 )
+material/19 = SubResource( 21 )
+material/20 = SubResource( 22 )
+material/21 = SubResource( 23 )
+material/22 = SubResource( 24 )
+material/23 = SubResource( 25 )
+material/24 = SubResource( 26 )
+material/25 = SubResource( 27 )
+material/26 = SubResource( 28 )
+material/27 = SubResource( 29 )
+material/28 = SubResource( 30 )
+material/29 = SubResource( 31 )
+material/30 = SubResource( 32 )
+material/31 = SubResource( 33 )
+material/32 = SubResource( 34 )
+material/33 = SubResource( 35 )
+material/34 = SubResource( 36 )
+material/35 = SubResource( 37 )
+material/36 = SubResource( 38 )
+material/37 = SubResource( 39 )
+material/38 = SubResource( 40 )
+material/39 = SubResource( 41 )
+material/40 = SubResource( 42 )
+material/41 = SubResource( 43 )
+material/42 = SubResource( 44 )
+material/43 = SubResource( 45 )
+material/44 = SubResource( 46 )
+material/45 = SubResource( 47 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18435, 2.30286, -0.852869 )
+shape = SubResource( 1 )

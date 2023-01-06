@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/BadBullet.gd" type="Script" id=1]
+[ext_resource path="res://sprites/2scale/bulletFoeShot.png" type="Texture" id=2]
+
+[node name="BadBullet" type="RigidBody2D"]
+editor/display_folded = true
+position = Vector2( -227.182, 212.218 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 8, 8, -8, 8, -8, -8, 8, -8 )

@@ -1,0 +1,52 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Scripts/Enemy2(Dog).gd" type="Script" id=1]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-6.png" type="Texture" id=6]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-8.png" type="Texture" id=9]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-9.png" type="Texture" id=10]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-3 - Copy.png" type="Texture" id=13]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-4 - Copy.png" type="Texture" id=14]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-5 - Copy.png" type="Texture" id=15]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-6 - Copy.png" type="Texture" id=16]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-7 - Copy.png" type="Texture" id=17]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-8 - Copy.png" type="Texture" id=18]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-9 - Copy.png" type="Texture" id=19]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-10 - Copy.png" type="Texture" id=20]
+[ext_resource path="res://Assets/New Piskel (25)-0/New Piskel (15)-0/New Piskel (15)-11 - Copy.png" type="Texture" id=21]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Run",
+"speed": 5.75
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.9975, 14.3083 )
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2( 34.5307, -13.9155 )
+mode = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -39.1659, 21.0505 )
+scale = Vector2( 0.209376, 0.224131 )
+frames = SubResource( 1 )
+animation = "Run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -48.5731, 21.2912 )
+shape = SubResource( 2 )

@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://MC.gd" type="Script" id=1]
+[ext_resource path="res://assets/GhostFrames/tile006.png" type="Texture" id=2]
+[ext_resource path="res://assets/GhostFrames/tile007.png" type="Texture" id=3]
+[ext_resource path="res://assets/GhostFrames/tile008.png" type="Texture" id=4]
+[ext_resource path="res://assets/GhostFrames/tile003.png" type="Texture" id=5]
+[ext_resource path="res://assets/GhostFrames/tile004.png" type="Texture" id=6]
+[ext_resource path="res://assets/GhostFrames/tile005.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "fall",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "run",
+"speed": 6.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 11.2709
+height = 19.686
+
+[node name="MC" type="KinematicBody2D" groups=[
+"Player",
+]]
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -175.945, 52.5826 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -174.174, 55.9846 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+drag_margin_left = 1.0
+drag_margin_top = 1.0
+drag_margin_right = 0.4
+drag_margin_bottom = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true

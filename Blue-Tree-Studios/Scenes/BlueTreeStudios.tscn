@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/BlueTreeLogo.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scripts/bluetreegroup.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.1051, 24.8947 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23.0195, 27.1963 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "something"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/KinematicBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 56.3001, 105.45 ), Vector2( 482.85, 109.25 ) ]
+}
+
+[node name="Transition" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CutScene" type="VideoPlayer" parent="Node2D"]
+margin_left = 2.32275
+margin_top = 1.36505
+margin_right = 1026.32
+margin_bottom = 601.365
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="KinematicBody2D" type="Area2D" parent="Node2D"]
+position = Vector2( 56.3001, 105.45 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/KinematicBody2D"]
+position = Vector2( 322.105, 353.684 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+position = Vector2( -38.9473, -35.7895 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2( 880.094, 497.557 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "something"
+anims/something = SubResource( 3 )
+[connection signal="area_entered" from="Node2D/Area2D" to="Node2D/KinematicBody2D" method="_on_Area2D_area_entered"]

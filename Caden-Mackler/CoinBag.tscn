@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://CoinBag.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Models/MedBox1.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 2, 2.5, 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Spin"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[node name="CoinBag" type="Area"]
+transform = Transform( -0.106689, 0, -0.994292, 0, 1, 0, 0.994292, 0, -0.106689, 20.2204, 3.85039, -12.4574 )
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 1.76001, 0 )
+shape = SubResource( 1 )
+
+[node name="Gold" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Gold"]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Spin"
+anims/Spin = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_CoinBag_body_entered"]

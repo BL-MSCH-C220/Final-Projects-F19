@@ -1,0 +1,661 @@
+{
+  "verbs": [
+    {
+      "v": "EXITS",
+      "map": "EXITS"
+    },
+    {
+      "v": "QUIT",
+      "map": "QUIT"
+    },
+    {
+      "v": "NORTH",
+      "map": "NORTH"
+    },
+    {
+      "v": "BACK",
+      "map": "BACK"
+    },
+    {
+      "v": "B",
+      "map": "BACK"
+    },
+    {
+      "v": "N",
+      "map": "NORTH"
+    },
+    {
+      "v": "SOUTH",
+      "map": "SOUTH"
+    },
+    {
+      "v": "S",
+      "map": "SOUTH"
+    },
+    {
+      "v": "EAST",
+      "map": "EAST"
+    },
+    {
+      "v": "E",
+      "map": "EAST"
+    },
+    {
+      "v": "WEST",
+      "map": "WEST"
+    },
+    {
+      "v": "DRIVE",
+      "map": "DRIVE"
+    },
+    {
+      "v": "DRIVE",
+      "map": "D"
+    },
+    {
+      "v": "W",
+      "map": "WEST"
+    },
+    {
+      "v": "SUBURBS",
+      "map": "SUBURBS"
+    },
+    {
+      "v": "CITY",
+      "map": "CITY"
+    },
+    {
+      "v": "CAR",
+      "map": "CAR"
+    },
+    { 
+      "v": "CONVENIENCESTORE",
+      "map": "CONVENIENCESTORE"
+    },
+    {
+      "v": "MAINSQUARE",
+      "map": "MAINSQUARE"
+    },
+    {
+      "v": "CHECKSHELVES",
+      "map": "CHECKSHELVES"
+    }, 
+    {
+      "v": "CHECKBEHINDCOUNTER",
+      "map": "CHECKBEHINDCOUNTER"
+    },
+    {
+      "v": "TAKEIT",
+      "map": "TAKEIT"
+    },
+    {
+      "v": "LEAVEIT",
+      "map": "LEAVEIT"
+    },
+    {
+      "v": "SHOOT",
+      "map": "SHOOT"
+    },
+    {
+      "v": "RUN",
+      "map": "RUN"
+    },
+    {
+      "v": "FIGHT",
+      "map": "FIGHT"
+    },
+     {
+       "v": "fight",
+       "map": "fight"
+     }, 
+      {
+      "v": "GATE",
+      "map": "GATE"
+    },
+    {
+      "v": "SUBWAY",
+      "map": "SUBWAY"
+    },
+    { 
+      "v": "INVESTIGATEIT",
+      "map": "INVESTIGATEIT"
+    },
+    { 
+      "v": "TURNBACK",
+      "map": "TURNBACK"
+    },
+    {
+      "v": "USENECKLACE",
+      "map": "USENECKLACE"
+    },
+    { 
+      "v": "LEAVE",
+      "map": "LEAVE"
+    },
+    {
+      "v": "LOOKFORSUPPLIES",
+      "map": "LOOKFORSUPPLIES"
+    },
+    {
+       "v": "LIVINGROOM",
+       "map": "LIVINGROOM"
+    },
+    {
+       "v": "GARAGE",
+      "map": "GARAGE"
+    },
+    {
+      "v": "STAY",
+      "map": "STAY"
+    },
+    {
+      "v": "WAITFORHELP",
+      "map": "WAITFORHELP"
+    },
+    {
+      "v": "USEFIRSTAIDKIT",
+      "map": "USEFIRSTAIDKIT"
+    },
+    {
+       "v": "SEARCHCAR",
+      "map": "SEARCHCAR"
+    },
+    {
+      "v": "USETOOLBOX",
+      "map": "USETOOLBOX"
+    },
+    {
+      "v": "USEGUN",
+      "map": "USEGUN"
+    }
+      
+
+
+  ],
+  "rooms": {
+    
+    "START": {
+      "name": "In the car",
+      "desc":"you wake up against your steering wheel. Your head is aching bad and you can't seem to remember what lead to your crash. When you look around you though, you wonder if you're actually the lucky one. Cars are piled up in the road, some abandoned and others crashed. You can't see anyone around for miles. Infront of you on the interstate are the suburbs just outdide the city limits. Behind you lies the city itself you remember that you live there, but you can't understand why you would have been driving to the suburbs. Do you continue towards the suburbs or go back to the city?",
+      "exits": [
+        {
+          "verb": "SUBURBS",
+          "target": "SUBURBS",
+          "condition": ""
+        },
+        {
+          "verb": "CITY",
+          "target": "CITY",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "CITY": {
+      "name": "into the city",
+      "desc": "You begin your treck into the city where it lies just behind you. From what the highway sign tells you, the heart of the city is only a few miles ahead. After the crash, your mind is a bit fuzy, but you remember you were driving out of the city; you can't remember why. It takes you almost two hours, but you eventually make it in. The city looks to be deserted. the streets are just the same, but signs are smashed, lights blown, stores windows are smashed in. The power appears to be out and a riot must have taken place. You really wish you could remember what happened here. You see a convenience store's window smashed in, but down the street you can also see the main square. Where would you like to go?",
+      "exits": [
+        {
+          "verb": "CONVENIENCESTORE",
+          "target": "CONVENIENCESTORE",
+          "condition": ""
+        },
+        {
+          "verb": "MAINSQUARE",
+          "target": "SQUARE",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CONVENIENCESTORE": {
+      "name": "Inside the convenience store",
+      "desc": "You crouch down through the shards of glass that still sit stuck in the windowframe. The glass under your feet crunch and break the overwhelming silence. The shelves are ransacked, only a few sparse cans on some of the shelves and frozen goods that have already started to thaw and go bad. Then, from a distance you hear a noise. Sitting on the checkout counter is an old batery radio. It's shockingly one of the few things still unbroken. You here the voice on the radio say 'This is an emergency broadcast. Due to an unidentifiable viral outbreak, we advise all citizens to evacuate to their designated safehouses until further notice. This has been a public service announcement.' Your body is washed over with dread and fear. What could this mean? You don't understand what happned. If what it says is true, you shouldn't stay out here in the open where you're vonerable for much longer. You consider raiding what is left on the shelves or maybe check behind the counter of the register. What would you like to do?",
+      "exits": [
+        {
+          "verb": "CHECKSHELVES",
+          "target": "CHECKSHELVES",
+          "condition": ""
+        },
+        {
+          "verb": "CHECKBEHINDCOUNTER",
+          "target": "CHECKBEHINDCOUNTER",
+          "condition": ""
+        }
+      ],
+      "inventory": []
+    },
+    "CHECKSHELVES": {
+      "name":"convenience store shelves",
+      "desc":"You duck and weave through the rows of empty shelves. You scope out a few unbroken bags of snacks and shove a few safe bags of cheetos into your pockets. As you eye up an umbrella you found as a viable weapon, something metalic gliters in the corner of your eye under the fluorescent lights and catches your attention. Laying amongst the debris on the ground is a strange necklace that looks like a spiral-like triangle. The chain is broken, you imagine that's how the owner must have lost it, but it is otherwise fine. Should you take it or leave it?",
+      "exits":
+      [
+        {
+          "verb": "TAKEIT",
+          "target": "CONVENIENCEATTACK",
+          "condition": ""
+        },
+        {
+          "verb": "LEAVEIT",
+          "target": "CONVENIENCEATTACK",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "CHECKBEHINDCOUNTER": {
+      "name":"Behind the convenience store counter",
+      "desc":"You heave yourself up and over the counter. The register has already been broken open and all the money taken, really you didn't expect any less, but besides that you're surprised by how litte there really is. You crouch down under the counter in a vain attempt to find anything of worth when you see a small handgun in a small hidden pocket along the wall of the counter. Huh, must be a rougher neighborhood than you realized. You open the revolver and see that there's only one bullet in the chamber. It's not much, but it might be worth something. Should you take it?",
+      "exits":
+      [
+        {
+          "verb": "TAKEIT",
+          "target": "CONVENIENCEATTACK",
+          "condition": ""
+        },
+        {
+          "verb": "LEAVEIT",
+          "target": "CONVENIENCEATTACK",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "CONVENIENCEATTACK": {
+      "name":"Inside the convenience store",
+      "desc":"Your head shoots up as you hear a lound bang near the back of the store. There is a perturbed groan and grumble followed by someone stepping through the fallen debris in the store. The woman that stumbles in looks worse for wear. Her clothes are tattered and her skin is dirty. You can't quite tell if her hair is hair or a bird's nest and- oh god is that blood on her?! When she raises her head, you're nervousness from finally seeing someone turns to pure dread. She looks dazed, her mouth is coated in blood. The broadcast said viral outbreak, does this mean- is she a zombie?! What are you going to do?",
+      "exits":
+      [
+        {
+          "verb": "SHOOT", 
+          "target": "KILLZOMBIE",
+          "condition": ""
+        },
+        {
+          "verb": "RUN",
+          "target": "SQUARE3",
+          "condition": ""
+        },
+        {
+          "verb": "FIGHT",
+          "target": "FIGHT",
+          "condition": ""
+        }
+
+      ], 
+      "inventory":[]
+    },
+    "FIGHT": {
+      "name":"Inside the convenience store",
+      "desc":"You are not equiped to fight, but you've never been one to run. You grab the nearest magazine wrack and throw it down on the ground to trip up the dead woman coming after you. She manages to grab hold of your jacket and pull you back twoards her, man is her grip shockingly strong, but you pick up the stray beer bottle on the ground and swing it at her head. Luckily she's begun the rotting process enough that it knocks her head clean off her shoulders. She slumps to the ground completely lifeless. After all of that, maybe you should leave.",
+      "exits":
+      [
+        {
+          "verb": "LEAVE", 
+          "target": "SQUARE3",
+          "condition": ""
+        }
+
+      ],
+      "inventory":[]
+    },
+    "KILLZOMBIE": {
+      "name":"Inside the convenience store",
+      "desc":"You whip out the gun you found and aim it at the undead woman's head. With a decently aimed shot, you put a bullet in her head off center in her head, but good enough to kill. Unfortunately you forget that she's undead. She looks badly damaged but not dead. You use the gun itself to knock her head clean off to finish the job. After all of that, maybe you should leave. ",
+      "exits":
+      [
+        {
+          "verb": "LEAVE",
+          "target": "SQUARE3",
+          "condition": ""
+        }
+
+      ],
+      "inventory":[]
+    },
+    "SQUARE": {
+      "name":"main square",
+      "desc":"You decide to continue down the road to the main square. You've yet to run into another human being, but you know people will be there, they have to. As you get closer though, you hear one of the large jumbo screens above the plaza saying something. 'This is an emergency broadcast. Due to an unidentifiable viral outbreak, we advise all citizens to stay inside their homes until further notice. This has been a public service announcement.' A viral break out? You don't understand exactly what that might mean, but that could explain the state of things. If people were getting terribly sick, riots may occur. That being said, you feel like it's probably not safe for you to be out in the open like this. Two things catch your eye. One is a large metal gate blocking off an old alley you know you've never seen before as well as a staircase access to the subway underground. You also consider going back to the convenience store. Which would you like to explore?",
+      "exits":
+      [
+        {
+          "verb": "GATE",
+          "target": "GATE",
+          "condition": ""
+        },
+        {
+          "verb": "SUBWAY",
+          "target": "SUBWAY",
+          "condition": ""
+        },
+        {
+          "verb": "CONVENIENCESTORE",
+          "target": "CONVENIENCESTORE",
+          "condition": ""
+        }
+
+      ],
+      "inventory":[]
+    },
+    "SUBWAY": {
+      "name":"underground subway",
+      "desc":"Just like everything else, it's deserted. You're starting to get anxious; there's no sign of people anywhere and you still know so little about this whole breakout. The only lights still functioning are the emergency lights, but even those are flickering like they may leave you alone too. You can hear wind from inside the tubes, but no trains are coming, you don't think they ever will. You think you can hear something coming from down the path on the tracks. Do you investigate it or turn back?",
+      "exits":
+      [
+        {
+          "verb": "INVESTIGATEIT",
+          "target": "ZOMBIEHOARD",
+          "condition": ""
+        },
+        {
+          "verb": "TURNBACK",
+          "target": "SQUARE2",
+          "condition": ""
+        }
+
+      ],
+      "inventory":[]
+    },
+    "SQUARE2": {
+      "name":"main square",
+      "desc":"The town square is just as you left it. The Large TV is still playing the same unsettling PSA warning all people to remain indoors. You can go to the strage gate, go underground into the subway, or go back to the convenience store.",
+      "exits":
+      [
+        {
+          "verb": "GATE",
+          "target": "GATE",
+          "condition": ""
+        },
+        {
+          "verb": "SUBWAY",
+          "target": "SUBWAY",
+          "condition": ""
+        },
+        {
+          "verb": "CONVENIENCESTORE",
+          "target": "CONVENIENCE2",
+          "condition": ""
+        }
+
+      ],
+      "inventory":[]
+    },
+    "ZOMBIEHOARD": {
+      "name":"on the subway tracks",
+      "desc":"It's almost impossible to see in here. There are faint lights that guide the path of the tunnel, maybe one small light every thirty feet, but it's faint. You know you heard something. At the time, your desperate mind hoped it was other survivors, people who could help you, but now you are begining to think what ever is down here might not be safe. Just as you consider your danger, you hear it: feet shuffling on the ground. You consider calling out, but in the faint light, you see a figure ambling closer to you. There are more behind it. They do not speak. They only cry out in strange tones. You're frozen in fear. At once you make a break for it back to where you came from, but it's too late. They hear you and suddenly those wabling steps are far more confedent as a whole swarm of bodies close in on you. You're heditant to think of them as human. You could try and fight back, but it's fuetile, they overwhelm you before you can try and your death is fast. Try again?",
+      "exits":
+      [
+        {
+          "verb": "RESTART",
+          "target": "START",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "SQUARE3": {
+      "name":"main square",
+      "desc":"After that run in with the undead woman, you're starting to have a few ideas about what's happening here, but you're far too frazzled to know what to do with this new and still limited information. All that matters though is that you've made it to safety; she doesn't seem to be following you. The large jumbo screen is playing a similar PSA as what you heard in the store, but still you don't see anyone around. Two things catch your eye. One is a large metal gate blocking off an old alley you know you've never seen before as well as a staircase access to the subway underground. You also consider going back to the convenience store. Which would you like to explore?",
+      "exits":
+      [
+        {
+          "verb": "SUBWAY",
+          "target": "SUBWAY",
+          "condition": ""
+        },
+        {
+          "verb": "GATE",
+          "target": "GATE",
+          "condition": ""
+        },
+        {
+          "verb": "CONVENIENCESTORE",
+          "target": "CONVENIENCE2",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "CONVENIENCE2": {
+      "name":"convenience store",
+      "desc":"You go back to the convenience store and climb through the broken glass in the window frame. The glass crunches solidly below you, you hear the radio playing the PSA, but it seems safe otherwise. You're starting to get worried about finding decent supplies to keep yourself alive. You should look for supplies.",
+      "exits":
+      [
+        {
+          "verb":"LOOKFORSUPPLIES",
+          "target":"SHELVES2",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "SHELVES2": {  
+      "name": "convenience store shelves",
+      "desc": "You try and scrap together what you can of what is leftover in this ransacked convenience store. There are a few food items that you think have survived well enough. You also were eyeing those neat shades when something caught your attention from the corner of your eye. The metalic glint of a necklace that lay in the mess of debris on the ground. The chain is broken, you assume that's why it's hear, but otherwise the strage spirtal like triangle pendant remains the same. You have what you want, do you take it and go back to the city square or leave it?",
+      "exits":
+      [
+        {
+          "verb":"TAKEIT",
+          "target": "SQUARE2",
+          "condition": ""
+        },
+        {
+          "verb": "LEAVEIT",
+          "target": "SQUARE2",
+          "condition": ""
+        }
+      ],
+      "inventory":[]
+    },
+    "GATE": {
+      "name": "strange gate",
+      "desc":"You walk up to the gate. It's strange metal design isn't something you recognize ever being around the city. It looks like metal vines growning around the prongs flowering into small roses. On the gate where a lock should be is a small hole. You wonder what it does. Poking it with your finger sure doesn't do anything.",
+      "exits":
+      [
+        {
+          "verb":"USENECKLACE",
+          "target":"CAMP",
+          "condition":""
+        },
+        {
+          "verb": "LEAVE",
+          "target": "SQUARE2",
+          "condition":""
+        }
+      ],
+      "inventory":[]
+    },
+    "CAMP": {
+      "name": "Secret survivor camp",
+      "desc":"You placed the necklace pendant into the hole and a lock mechanism made a loud clunk before the door swong open. You take the necklace back out of the door not wanting to lose what seems to be your newest neat trick. Now that you're inside the alley way, there are sounds coming from the distance. This time, you feel comforted by the noise. It's the unmistakeable sounds of soft chatter of people. When you reach the end of the alley, you are in a small clearing full of what looks like refugees. They encorage you to sit down while they explain what has happened. They tell you about the undead that have been popping up, about how they have managed to create some sebalance of safety. The necklace you found was meant for only their elite group, but since you managed to make it, they deemed you worthy to stay. You have survived the end of the world.",
+      "exits":
+      [
+        {
+          "verb":"EXITS",
+          "target":"EXITS",
+          "condition":""
+        }
+      ],
+      "inventory":[]
+  },
+  "SUBURBS": {
+    "name": "into the suburbs",
+    "desc": "You take the highway south until you start to see the beginnings of a neighborhood. The houses have slight wear on them, like they’ve been ripped through by something. One house to your right is mostly unscathed from the damage. Its clean exterior beckons to you, and before you know it, you’re standing in the driveway looking up at it. The garage door is open slightly, a forceful push would open it no problem. On the other hand, you can see a television displaying a message in the living room through the glass of the front door. Where should you search?",
+    "exits": [
+      {
+        "verb": "LIVINGROOM",
+        "target": "LIVINGROOM",
+        "condition": ""
+      },
+      {
+        "verb": "GARAGE",
+        "target": "GARAGE",
+        "condition": ""
+      }
+    ],
+    "inventory": []
+  },
+  "LIVINGROOM": {
+    "name": "Inside the living room",
+    "desc": "The door opens after a forceful kick. You stumble in, inertia smacking you into the hardwood floors. You quickly gather yourself and close the door behind you, locking it as fast as possible. You look around the room before you spot a trophy on the mantle that has an expensive looking gun on it and a first aid kit. Getting closer, you see the trophy was given to a veteran that served 25 years in the military. You say a quiet thank you before knocking the plaque to the ground and ripping the gun off of it. Shoving it into your pocket, you turn your attention towards the television expectantly. The screen goes black for a few seconds before beeping twice to signal the start of the broadcast. The screen lights up with colorful bars before displaying nothing but the subtitles to the announcement. “This is an emergency broadcast. Due to an unidentifiable viral outbreak, we advise all citizens to stay inside their homes until further notice. This has been a public service announcement.” Panic sets in for a moment as you struggle to understand what the broadcast means. Should you leave to search for other survivors or should you stay inside like the broadcast instructed you?",
+    "exits": [
+      {
+        "verb": "LEAVE",
+        "target": "LEAVE",
+        "condition": ""
+      },
+      {
+        "verb": "STAY",
+        "target": "STAY",
+        "condition": ""
+      }
+    ],
+    "inventory": ["Gun", "first aid kit"]
+  },
+  "GARAGE": {
+    "name": "Inside the garage",
+    "desc": "You easily pull up the garage door, but it makes a horribly loud noise as it opens. You dash inside quickly, shutting the door behind you with another horrible crash. The inside of the garage smells thickly of rust, and your eyes adjust to the darkness as you feel around your surroundings. Your hand feels around on the wall and finally hits the lightswitch, and you turn around as the light fills the room. There isn’t much in the garage. A few small bikes hanging on the wall, a type of workbench you assume is for a car, and a colorful poster of a half naked lady on the wall. As much as the poster draws your attention, you walk towards the workbench and manage to collect some tools you deem useful in a rusted red toolbox. There’s a small radio on the workbench, and your fingers fumble trying to get the dials right. Suddenly the static is interrupted by two loud beeps as a short radio broadcast.“This is an emergency broadcast. Due to an unidentifiable viral outbreak, we advise all citizens to evacuate to their designated safehouses until further notice. This has been a public service announcement.”Panic sets in for a moment as you struggle to understand what the broadcast means. Should you leave like the broadcast says, or what it be safer to stay in the house??",
+    "exits": [
+      {
+        "verb": "LEAVE",
+        "target": "LEAVE",
+        "condition": ""
+      },
+      {
+        "verb": "STAY",
+        "target": "STAY",
+        "condition": ""
+      }
+    ],
+    "inventory": ["Flashlight", "First Aid Kit"]
+  },
+  "LEAVE": {
+    "name":"You decided to leave",
+    "desc":"You decide the best course of action is to leave because of your hope to find other people. You leave the house, but the silence around you on the street is deafening. You walk farther into the neighborhood and eventually find a car that looks like it could be usable. Unlike your car, the windshield is unshattered, and even looks clean. You wonder if someone has recently used it. The hood is popped, and you can see where it looks like someone was doing repairs on it. What should you do next??",
+    "exits":
+    [
+      {
+        "verb": "SEARCHCAR",
+        "target": "SEARCHCAR",
+        "condition": ""
+      },
+      {
+        "verb": "USETOOLBOX",
+        "target": "USETOOLBOX",
+        "condition": ""
+      }
+    ],
+    "inventory":["Tool Box", "First Aid kit"]
+  },
+  "STAY": {
+    "name":"You decided to stay",
+    "desc":"You decide to stay in the house after determining it would be the safest option. You wait around for a few hours before you get bored of listening to the repeated broadcast and eating on a can of pumpkin pie filling. You decide to explore the other rooms of the house and start with the basement. This house was so perfectly preserved you assumed the family that lived here would have some sort of rations in the basement. You pry the basement door open and are greeted by a cold breeze of the downstairs. You grasp the railing firmly with your right hand and start walking down the stairs. The second your foot hits the stairs there’s a loud creaking of the wood below you. There’s a moment of hesitation in your mind, but you continue walking down the stairs. You’re at the bottom, and you feel around the wall for a light switch. There’s a loud sound of something snapping and you run backwards, tripping on the bottom most step. Your back hits the wooden stairs with a thud and you can see a figure through the brightness of the room upstairs. You start walking backwards up the stairs with your hands as it grows nearer, walking with a slow beat and awkward steps. You’re at the middle of the stairs before it reaches the bottom. It has pale green skin and it’s hair is patchy, black, and greasy. It resembles something that used to be human,  but lost its humanity long ago. The zombie grabs your ankle with a growl and pulls you towards it with surprising force. You grab onto the nearest stair and flail your legs to attempt to wriggle it off. What do you do next?",
+    "exits":
+    [
+      {
+        "verb": "USEGUN",
+        "target": "USEGUN",
+        "condition": ""
+      },
+      {
+        "verb": "fight",
+        "target": "fight",
+        "condition": ""
+      }
+    ],
+    "inventory":[]
+  },
+  "USEGUN": {
+    "name":"You take out your gun",
+    "desc":"The hand not gripping the stair reaches into your pocket for your weapon. You turn your body on the stairs, looking down on the creature that is now crawling up to your knees. You use your weapon, hands shaking wildly as you attempt to kill the zombie. You give your legs another good flail, which throws the zombie off of your legs and crashing into the bottom of the stairs. You stand up and use your weapon, shut your eyes, and kill the zombie. It falls down with a disgusting smack of flesh against the hard basement floor, and you look down to see the gun is out of bullets. The zombie’s hand slithers up the first stairs, and in a frenzy you throw the gun into the creature’s head, run up the stairs, and slam the door shut. ",
+    "exits":
+    [
+      {
+        "verb": "WAITFORHELP", 
+        "target": "WAITFORHELP",
+        "condition": ""
+      },
+      {
+        "verb": "USEFIRSTAIDKIT",
+        "target": "USEFIRSTAIDKIT",
+        "condition": ""
+      }
+
+    ], 
+    "inventory":[]
+  },
+  "fight": {
+    "name":"You chose to fight",
+    "desc":"As the zombie pulls you nearer you realize there’s not much for you to do except fight for your life. You turn on the creature, and throw a weak punch to its face. It recoils a bit, but continues to pull you towards it. You’re not holding onto anything at this point, and the zombie easily pulls you towards itself. You try and slide under the zombie but its hand wraps around your throat and holds you in place underneath it. You struggle as your start to feel yourself losing consciousness as its grip strengthens around your throat, but you manage to keep it’s gnashing teeth away from your neck. With your last ounce of strength you manage to use your elbow to knock the zombie into the stairwell. It slides down the stairs and loses its grip around your throat. You suck in a deep breath of air as you pathetically deliver blows to the creature’s head. It looks up at you, and its jaw hangs limply from the bottom of its head. You turn to run up the stairs, but the creature digs it’s long fingernails into your leg, creating a long gash. There’s a loud crunch, and then a scream, and you’re not even sure if it was you or the zombie. You drag your bleeding, limp leg up the stairs, tears streaming down your face. The undead creature watches you with hungry, lifeless eyes, but it looks too tired to follow you. You reach the top of the stairs, leaving a bright red trail behind you, and slam the door with a puny shove. You put your back to the door, look down at your leg and the torn denim of your jeans, and wonder what to do next. .",
+    "exits":
+    [
+      {
+        "verb": "WAITFORHELP", 
+        "target": "WAITFORHELP",
+        "condition": ""
+      },
+      {
+        "verb": "USEFIRSTAIDKIT",
+        "target": "USEFIRSTAIDKIT",
+        "condition": ""
+      }
+
+    ],
+    "inventory":[]
+  },
+  "WAITFORHELP": {
+    "name":"You chose to wait for help",
+    "desc":"You feel your energy waning, and you don’t have any tools to help you, so you wait for someone to come help. After a few hours, you decide to drag yourself to the kitchen and look for something to help you, but you see the blood trail you’re leaving is too thick and red and realize your end is coming sooner than you thought. Your eyes start to slowly become heavier and your leg becomes more numb as your entire world fades to white. .",
+    "exits":
+    [
+      {
+        "verb": "QUIT", 
+        "target": "EXITS",
+        "condition": ""
+      }
+
+    ],
+    "inventory":[]
+  },
+  "USEFIRSTAIDKIT": {
+    "name":"You chose to use your first aid kit",
+    "desc":"You remember the First Aid Kit you picked up earlier, and fish it out of your backpack. The contents are in a foreign language, which means you can’t read the directions, but you select a bottle of clear liquid to disinfect the gash. You take the cap off and spill the liquid on your leg, which makes you emit a loud screech. Reeling from the pain, you use the soft gauze to wrap your leg and stick some bandages on the leg because you have no other ideas. You’re hurt, but you’re still breathing. You stand up shakily and brace from the pain from your new wounds. You don’t know if there’s more zombies in the house, but you know there’s a chance there’s a million more. You decide to stay in the house and protect it from whatever the hell comes. Within hours, you’ve barricaded the two points of entry in the house, locked the basement door with a heavy duty chain you found in the garage, and collected everything edible into a pile in the living room. The only other living thing in the house is an extremely frightened Pomeranian you found in one of the bedrooms. You nickname him Pip. Pip is your companion to the end of the world, and together you watch countless zombies search the street from the upstairs windows. You end up rescuing all the dogs in the neighborhood, and living a long happy life with your dog companions and the food you took from the neighboring houses.  ",
+    "exits":
+    [
+      {
+        "verb": "QUIT", 
+        "target": "EXITS",
+        "condition": ""
+      }
+    ],
+    "inventory":[]
+  },
+  "SEARCHCAR": {
+    "name":"You decided to search the car",
+    "desc":"You don’t have any tools to use to get the car running, so you decide to quickly get to searching it. Hopefully whoever used this is far enough away to not hear the loud alarm from you breaking the window. You unlock the door and take your hand back, shaking off the glass fragments. You open the door and climb in, looking at the dashboard first. There’s a key inside the ignition, and when you turn it, the engines fires to life with a low rumble. You excitedly go to put your seatbelt on and there’s a rustle behind you. Before you can turn around to see what’s up, the seatbelt is wrapped around your neck, and you’re strapped to the seat. You can barely breathe, and whoever is strangling you is trying to crawl over into the passenger seat. You see the flash of what you assume to be a knife, and terror sets in. You shift gears in the car and slam on the gas, making your attacker fly into the backseat. There’s a clatter of the knife to the ground and the seatbelt around you loosens. You.jerk the steering wheel and the car swerves to the right. The person in the backseat slides over and smacks into the window. You lose control of the vehicle and crash sideways into a pile of car parts. You’re fine, but you take a peek at your attacker and your eyes tear up. She was a young girl, about the same age as you. Her head was bleeding, and she didn’t appear to be breathing. You look up and start to get out of the car when you are suddenly surrounded by people that look just about as rough as you feel. Defeated, you put up your hands. They swarm you and check the car loudly yelling as they go. Their voices fade into silence. An important looking man comes up to you. He explains that the girl who attacked you was his daughter. The rules of their group caused her to feel the need to resort to violence. He offers you a spot in the clan as his adopted family. You accept, and are murdered within 6 hours when they release a feral zombified bear into your room. . ",
+    "exits":
+    [
+      {
+        "verb": "QUIT",
+        "target": "EXITS",
+        "condition": ""
+      }
+
+    ],
+    "inventory":[]
+  },
+  "USETOOLBOX": {
+    "name":"You decided to use the toolbox",
+    "desc":"You decide to use the toolbox from the garage to finish the repairs on the car. You get to it, and after about 20 minutes, you finally get the car to peak performance. As you start the car and get ready to drive off, you hear a loud scream. Someone is running towards the car and screaming. They’re followed by three snarling zombies. They all but leap into the passenger side and scream at you to drive off. You hit one of the zombies pulling out, but manage to speed out of the neighborhood mostly unscathed. The person you picked up introduces herself as Clara. She explains she’s from a group of survivors that formed a little camp not to far from where you two are. She gives you directions as a thanks for saving her, and shares her found food with you. You share a stale box of crackers while driving back. When you get to the camp, you are welcomed wholeheartedly into the community. You and Clare become great friends, and you often go out together with other members of the group to find supplies. You survived the End of the World.?",
+    "exits":
+    [
+      {
+        "verb": "QUIT",
+        "target": "EXITS",
+        "condition": ""
+      }
+    ],
+    "inventory":[] 
+    }
+  }
+}

@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/GameOverTime.gd" type="Script" id=1]
+[ext_resource path="res://Assets/antaro.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 250.0
+margin_top = 90.0
+margin_right = 750.0
+margin_bottom = 490.0
+color = Color( 0.254902, 0.231373, 0.231373, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 400.46
+margin_top = 109.831
+margin_right = 604.46
+margin_bottom = 152.831
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Game Over!"
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 401.352
+margin_top = 166.125
+margin_right = 620.352
+margin_bottom = 184.125
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "You didn't make it out in time :/"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 424.435
+margin_top = 308.651
+margin_right = 531.435
+margin_bottom = 346.651
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Try Again"

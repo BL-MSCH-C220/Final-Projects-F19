@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/BloodSplatter4.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Button2.gd" type="Script" id=3]
+
+[node name="YouLose" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="play again" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="play again"]
+margin_left = 189.0
+margin_top = 392.0
+margin_right = 841.0
+margin_bottom = 486.0
+flat = true
+
+[node name="credits" type="Node2D" parent="."]
+position = Vector2( 412.535, 494.373 )
+script = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="credits"]
+margin_right = 179.0
+margin_bottom = 80.0
+
+[node name="Label" type="Label" parent="credits"]
+margin_right = 179.0
+margin_bottom = 79.0
+text = "Credits"
+align = 1
+valign = 1
+[connection signal="pressed" from="play again/Button" to="play again" method="_on_Button_pressed"]
+[connection signal="pressed" from="credits/Button" to="credits" method="_on_Button_pressed"]

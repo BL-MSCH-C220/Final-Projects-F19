@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Building Textures/modularBuildings_054.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Skyscraper" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="modularBuildings_054" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 2, 0, 0, 0, 7, 0, 0, 0, 2, -0.354795, 0.406187, 0.981147 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.16, 0, 0, 0, 2.24, 0, 0, 0, 1.16, 0.621799, 2.59216, -0.000391006 )
+shape = SubResource( 1 )

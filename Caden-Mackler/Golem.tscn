@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Models/Monsters/Slasher.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Models/Monsters/Slasher.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.654902, 0.603922, 0.603922, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.67841
+height = 2.74173
+
+[node name="Area" type="Area"]
+
+[node name="Slasher" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0816689, 1.48915, -0.0780864 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52485, 0 )
+shape = SubResource( 2 )

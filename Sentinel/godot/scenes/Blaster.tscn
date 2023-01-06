@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Blaster.gd" type="Script" id=1]
+[ext_resource path="res://sprites/2scale/foe2.png" type="Texture" id=2]
+
+[node name="Blaster" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 3
+gravity_scale = 0.33
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -12.1, -10, 12, -10, 13.8, -8, 16.8, -8, 23.6, -10, 26, -10, 26, 10, 16.8, 10, 15.3, 7, 13, 10, -14, 10, -14, 8, -26, 10, -26, -10, -14.7, -8.3 )

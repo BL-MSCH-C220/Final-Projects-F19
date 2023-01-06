@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Extra/codeman38_press-start/prstartk.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Level2" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.027451, 0.027451, 0.027451, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.54367
+margin_top = 41.9667
+margin_right = 312.544
+margin_bottom = 133.967
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.976471, 0.976471, 0.976471, 1 )
+text = "MEN AT WORK
+
+THANK YOU!"
+align = 1
+valign = 1

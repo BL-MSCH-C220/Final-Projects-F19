@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Models/Monsters/Slasher.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Models/Monsters/Slasher.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.784314, 0.733333, 0.733333, 1 )
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.6732
+
+[node name="Zombie" type="Area"]
+
+[node name="Zombie" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.811807, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12229, 0 )
+shape = SubResource( 2 )

@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/1bitpack_kenney/Tilemap/LevelTwo.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Tilemaps/wall2.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Car.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=8]
+
+[node name="LevelTwo" instance=ExtResource( 1 )]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, 65535, 0, 0, 17, 0, 0, 23, 0, 0, 131071, 0, 0, 65553, 0, 0, 65559, 0, 0, 196607, 0, 0, 131089, 0, 0, 131095, 0, 0, 262143, 0, 0, 196625, 0, 0, 196631, 0, 0, 327679, 0, 0, 262161, 0, 0, 262167, 0, 0, 393215, 0, 0, 327697, 0, 0, 327703, 0, 0, 458751, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 524287, 0, 0, 458762, 0, 0, 458768, 0, 0, 458769, 0, 0, 458775, 0, 0, 589823, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524305, 0, 0, 524311, 0, 0, 655359, 0, 0, 589830, 0, 0, 589834, 0, 0, 589841, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 720895, 0, 0, 655366, 0, 0, 655370, 0, 0, 655377, 0, 0, 655383, 0, 0, 655390, 0, 0, 786431, 0, 0, 720926, 0, 0, 851967, 0, 0, 786438, 0, 0, 786442, 0, 0, 786449, 0, 0, 786455, 0, 0, 786462, 0, 0, 917503, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851985, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 851996, 0, 0, 851997, 0, 0, 851998, 0, 0, 983039, 0, 0, 917514, 0, 0, 917520, 0, 0, 917521, 0, 0, 917527, 0, 0, 1048575, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983057, 0, 0, 983063, 0, 0, 1114111, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1179647, 0, 0, 1114129, 0, 0, 1114135, 0, 0, 1245183, 0, 0, 1179665, 0, 0, 1179671, 0, 0, 1310719, 0, 0, 1245201, 0, 0, 1245207, 0, 0, 1376255, 0, 0, 1310720, 0, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0, 1310724, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0, 1310741, 0, 0, 1310742, 0, 0, 1310743, 0, 0 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+position = Vector2( 36.6666, 161.333 )
+
+[node name="Enemy" parent="." index="3" instance=ExtResource( 4 )]
+position = Vector2( 33.3961, 27.993 )
+
+[node name="Enemy2" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 42.277, 283.722 )
+
+[node name="Enemy3" parent="." index="5" instance=ExtResource( 4 )]
+position = Vector2( 302.321, 293.849 )
+
+[node name="Tree" parent="." index="6" instance=ExtResource( 5 )]
+position = Vector2( 9.77406, 142.267 )
+
+[node name="Tree2" parent="." index="7" instance=ExtResource( 5 )]
+position = Vector2( 45.0693, 142.81 )
+
+[node name="Tree3" parent="." index="8" instance=ExtResource( 5 )]
+position = Vector2( 84.7085, 141.724 )
+
+[node name="Tree4" parent="." index="9" instance=ExtResource( 5 )]
+position = Vector2( 86.3376, 214.486 )
+
+[node name="Tree5" parent="." index="10" instance=ExtResource( 5 )]
+position = Vector2( 46.1553, 213.4 )
+
+[node name="Tree6" parent="." index="11" instance=ExtResource( 5 )]
+position = Vector2( 7.60205, 213.4 )
+
+[node name="Tree7" parent="." index="12" instance=ExtResource( 5 )]
+position = Vector2( 136.212, 166.838 )
+
+[node name="Tree9" parent="." index="13" instance=ExtResource( 5 )]
+position = Vector2( 329.06, 23.8921 )
+
+[node name="Tree10" parent="." index="14" instance=ExtResource( 5 )]
+position = Vector2( 329.685, 183.481 )
+
+[node name="Car" parent="." index="15" instance=ExtResource( 6 )]
+position = Vector2( 438.204, 183.535 )
+next_level = "res://Scenes/LevelThree.tscn"
+
+[node name="Door" parent="." index="16" instance=ExtResource( 7 )]
+position = Vector2( 376.111, 183.535 )
+
+[node name="Key" parent="." index="17" instance=ExtResource( 8 )]
+position = Vector2( 330.255, 55.7665 )

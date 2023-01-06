@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/DiveBomber.gd" type="Script" id=1]
+[ext_resource path="res://sprites/2scale/foe3.png" type="Texture" id=2]
+
+[node name="DiveBomber" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 3
+gravity_scale = 0.5
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 24, -19.5, 32, -17.6, 32, 8, 29.8, 8, 6.9, 32, -8, 32, -8, 29.8, -32, 6.8, -32, -16.8, -28.8, -20, -24, -20, -24, -32, -14, -32, -8.7, -28.1, -4.8, -32, 4, -32, 9.3, -28.1, 13.2, -32, 24, -32 )

@@ -1,0 +1,147 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/DayLight.gd" type="Script" id=1]
+[ext_resource path="res://assets/DayLighting.png" type="Texture" id=2]
+[ext_resource path="res://assets/TransparentCloud1.png" type="Texture" id=3]
+[ext_resource path="res://assets/TransparentCloud2.png" type="Texture" id=4]
+[ext_resource path="res://assets/TransparentCloudSmall.png" type="Texture" id=5]
+[ext_resource path="res://area_script.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 196, 336.262 )
+
+[node name="DayLight" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Light2D2" type="Light2D" parent="Light"]
+position = Vector2( -73.5, 196.261 )
+scale = Vector2( 2.5, 4.58522 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.976471, 0.976471, 0.956863, 0.717647 )
+energy = 3.0
+
+[node name="Light2D" type="Light2D" parent="Light"]
+position = Vector2( 63, 192.261 )
+scale = Vector2( 0.327763, 4.66522 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.960784, 0.960784, 0.94902, 0.611765 )
+energy = 2.0
+
+[node name="Light2D3" type="Light2D" parent="Light"]
+position = Vector2( -31, 196.5 )
+scale = Vector2( 0.169666, 4.47 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.988235, 0.988235, 0.976471, 0.745098 )
+
+[node name="Light2D4" type="Light2D" parent="Light"]
+position = Vector2( -180, 196 )
+scale = Vector2( 0.23072, 4.48 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.945098, 0.945098, 0.92549, 0.498039 )
+energy = 3.0
+
+[node name="Light2D5" type="Light2D" parent="Light"]
+position = Vector2( -129.275, 183.5 )
+scale = Vector2( 0.0478792, 4.73 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.972549, 0.972549, 0.945098, 0.54902 )
+energy = 3.0
+
+[node name="Light2D6" type="Light2D" parent="Light"]
+position = Vector2( -18.55, 183.761 )
+scale = Vector2( 0.0443445, 4.83522 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.980392, 0.980392, 0.972549, 0.427451 )
+energy = 5.0
+
+[node name="Light2D7" type="Light2D" parent="Light"]
+position = Vector2( -47, 188.011 )
+scale = Vector2( 0.159383, 4.75022 )
+texture = ExtResource( 2 )
+texture_scale = 0.2
+color = Color( 0.976471, 0.976471, 0.956863, 0.564706 )
+energy = 2.0
+
+[node name="Clouds" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="TextureRect" type="TextureRect" parent="Clouds"]
+margin_left = 1.0
+margin_top = -22.0
+margin_right = 137.0
+margin_bottom = 48.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect7" type="TextureRect" parent="Clouds"]
+margin_left = -149.0
+margin_top = -47.0
+margin_right = 113.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Clouds"]
+margin_left = -172.0
+margin_top = -63.0
+margin_right = -1.0
+margin_bottom = 35.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect5" type="TextureRect" parent="Clouds"]
+margin_left = -161.0
+margin_top = -52.0
+margin_right = 10.0
+margin_bottom = 46.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect4" type="TextureRect" parent="Clouds"]
+margin_left = -261.0
+margin_top = -55.0
+margin_right = -100.0
+margin_bottom = 14.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect3" type="TextureRect" parent="Clouds"]
+margin_left = -211.0
+margin_top = -59.0
+margin_right = 20.0
+margin_bottom = 44.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect6" type="TextureRect" parent="Clouds"]
+margin_left = -136.0
+margin_top = -53.0
+margin_right = 95.0
+margin_bottom = 50.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -74, 90 )
+shape = SubResource( 1 )

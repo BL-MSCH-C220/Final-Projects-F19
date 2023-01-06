@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://kenney_natureKit/Models/OBJ format/cliffBrown_top.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://kenney_natureKit/Models/OBJ format/grass_dense.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.8, 0.792157, 0.792157, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 0, 0, -4.5842, 0, 0, 0, 1.2395, 0, -4.1059, 10, 0, 0, 1.2395, 0, -4.1059, 0, 0, 0, 4.2497, 0, -3.1259, 1.2395, 0, -4.1059, 10, 0, 0, 2.3368, 0, -4.5842, 1.2395, 0, -4.1059, 4.2497, 0, -3.1259, 6.4144, 0, -4.5842, 4.2497, 0, -3.1259, 10, 0, 0, 7.9573, 0, -3.9964, 6.4144, 0, -4.5842, 10, 0, 0, 10, 0, -4.5842, 7.9573, 0, -3.9964, 10, 0, 0, 0, 10, 0, 0, 0, 0, 0, 10, -3.1366, 0, 0, -4.5842, 0, 10, -3.1366, 0, 0, 0, 7.9573, 0, -3.9964, 7.9573, 10, -2.5488, 6.4144, 0, -4.5842, 6.4144, 10, -3.1366, 6.4144, 0, -4.5842, 7.9573, 10, -2.5488, 1.2395, 0, -4.1059, 2.3368, 0, -4.5842, 1.2395, 10, -2.6582, 2.3368, 10, -3.1366, 1.2395, 10, -2.6582, 2.3368, 0, -4.5842, 2.3368, 0, -4.5842, 4.2497, 0, -3.1259, 2.3368, 10, -3.1366, 4.2497, 10, -1.6782, 2.3368, 10, -3.1366, 4.2497, 0, -3.1259, 10, 0, -4.5842, 10, 10, -3.1366, 7.9573, 0, -3.9964, 7.9573, 10, -2.5488, 7.9573, 0, -3.9964, 10, 10, -3.1366, 4.2497, 0, -3.1259, 6.4144, 0, -4.5842, 4.2497, 10, -1.6782, 6.4144, 10, -3.1366, 4.2497, 10, -1.6782, 6.4144, 0, -4.5842, 10, 0, 0, 0, 0, 0, 10, 10, 0, 0, 10, 0, 10, 10, 0, 0, 0, 0, 1.2395, 0, -4.1059, 1.2395, 10, -2.6582, 0, 0, -4.5842, 0, 10, -3.1366, 0, 0, -4.5842, 1.2395, 10, -2.6582, 10, 0, 0, 10, 10, 0, 10, 0, -4.5842, 10, 10, -3.1366, 10, 0, -4.5842, 10, 10, 0, 0, 10, -3.1366, 1.2395, 10, -2.6582, 0, 10, 0, 4.2497, 10, -1.6782, 0, 10, 0, 1.2395, 10, -2.6582, 10, 10, 0, 0, 10, 0, 4.2497, 10, -1.6782, 2.3368, 10, -3.1366, 4.2497, 10, -1.6782, 1.2395, 10, -2.6582, 6.4144, 10, -3.1366, 10, 10, 0, 4.2497, 10, -1.6782, 7.9573, 10, -2.5488, 10, 10, 0, 6.4144, 10, -3.1366, 10, 10, -3.1366, 10, 10, 0, 7.9573, 10, -2.5488, 1.2395, 9.1818, -3.3016, 1.2395, 10, -2.6582, 0, 9.1818, -3.78, 0, 10, -3.1366, 0, 9.1818, -3.78, 1.2395, 10, -2.6582, 4.2497, 9.1818, -2.3216, 6.4144, 9.1818, -3.78, 4.2497, 10, -1.6782, 6.4144, 10, -3.1366, 4.2497, 10, -1.6782, 6.4144, 9.1818, -3.78, 7.9573, 9.1818, -3.1922, 10, 9.1818, -3.78, 7.9573, 10, -2.5488, 10, 10, -3.1366, 7.9573, 10, -2.5488, 10, 9.1818, -3.78, 6.4144, 9.1818, -3.78, 6.8031, 9.1818, -3.6319, 6.4144, 10, -3.1366, 7.1858, 9.5909, -3.1644, 6.4144, 10, -3.1366, 6.8031, 9.1818, -3.6319, 6.4144, 10, -3.1366, 7.1858, 9.5909, -3.1644, 7.9573, 10, -2.5488, 7.9573, 10, -2.5488, 7.1858, 9.5909, -3.1644, 7.9573, 9.1818, -3.1922, 7.5686, 9.1818, -3.3403, 7.9573, 9.1818, -3.1922, 7.1858, 9.5909, -3.1644, 2.3368, 9.1818, -3.78, 2.815, 9.1818, -3.4154, 2.3368, 10, -3.1366, 3.2933, 9.5909, -2.7291, 2.3368, 10, -3.1366, 2.815, 9.1818, -3.4154, 2.3368, 10, -3.1366, 3.2933, 9.5909, -2.7291, 4.2497, 10, -1.6782, 4.2497, 10, -1.6782, 3.2933, 9.5909, -2.7291, 4.2497, 9.1818, -2.3216, 3.7715, 9.1818, -2.6862, 4.2497, 9.1818, -2.3216, 3.2933, 9.5909, -2.7291, 1.2395, 9.1818, -3.3016, 1.5139, 9.1818, -3.4212, 1.2395, 10, -2.6582, 1.7882, 9.3864, -3.38, 1.2395, 10, -2.6582, 1.5139, 9.1818, -3.4212, 1.2395, 10, -2.6582, 1.7882, 9.3864, -3.38, 2.3368, 10, -3.1366, 2.3368, 10, -3.1366, 1.7882, 9.3864, -3.38, 2.3368, 9.1818, -3.78, 2.0625, 9.1818, -3.6604, 2.3368, 9.1818, -3.78, 1.7882, 9.3864, -3.38 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.705882, 0.470588, 0.254902, 1 )
+
+[node name="forest cliff" type="StaticBody"]
+
+[node name="cliffBrown_top" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, -10, 0 )
+material_override = SubResource( 1 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, -10, 0 )
+shape = SubResource( 2 )
+
+[node name="grass_dense" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.04806, 10.0403, -1.03274 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense2" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.94668, 10.0403, -1.03274 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense3" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.95662, 10.0403, -1.03274 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense4" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.88722, 10.0403, -1.03274 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense5" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.93111, 10.0403, -1.03274 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense6" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.66216, 10.0403, -1.86775 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense7" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.97692, 10.0403, -1.86775 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense8" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.25768, 10.0403, -1.86775 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="grass_dense9" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.13764, 10.0403, -1.86775 )
+material_override = SubResource( 3 )
+mesh = ExtResource( 2 )
+material/0 = null
